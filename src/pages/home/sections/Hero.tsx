@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui';
 import { HERO } from '@/data/content';
 
-const portrait = '/images/edinho-retrato.jpg';
+const portrait = '/images/edinho-retrato2.png';
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -75,8 +75,8 @@ export function Hero() {
               src={portrait}
               alt="Edinho Araújo"
               className="h-full w-full object-cover"
-              width={1000}
-              height={1000}
+              width={1218}
+              height={1210}
             />
           </div>
           {/* selo número */}

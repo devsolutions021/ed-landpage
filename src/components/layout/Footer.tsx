@@ -15,8 +15,8 @@ export function Footer() {
       <div className="container-x px-5 py-16 lg:px-12">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <span className="inline-flex rounded-2xl bg-white px-4 py-3 shadow-card">
-              <Logo />
+            <span className="inline-flex">
+              <Logo className="h-14" />
             </span>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/55">
               Edinho é candidato a Deputado Federal por São Paulo. Foi prefeito de São José do Rio Preto e de Santa Fé do

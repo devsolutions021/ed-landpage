@@ -5,7 +5,7 @@ import { LINKS } from '@/data/links';
 import { DefendIcon } from './DefendIcon';
 import { SignForm } from './SignForm';
 
-const portrait = '/images/edinho-retrato.jpg';
+const portrait = '/images/edinho-retrato2.png';
 
 export function PetitionPage() {
   return (
@@ -13,8 +13,8 @@ export function PetitionPage() {
       {/* Header simples */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-lg">
         <div className="container-x flex items-center justify-between px-5 py-3 lg:px-12">
-          <Link to="/" aria-label="Voltar para a página inicial" className="inline-flex rounded-xl bg-white px-3 py-2 shadow-card">
-            <Logo className="h-10" />
+          <Link to="/" aria-label="Voltar para a página inicial" className="inline-flex flex-none">
+            <Logo className="h-11" />
           </Link>
           <div className="flex items-center gap-3">
             <Link to="/" className="hidden text-sm font-semibold text-white/70 hover:text-white sm:block">
@@ -69,7 +69,7 @@ export function PetitionPage() {
               <div className="relative mx-auto max-w-sm">
                 <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-[2rem] bg-gold-gradient opacity-90" />
                 <div className="overflow-hidden rounded-[2rem] border border-white/10 shadow-card">
-                  <img src={portrait} alt="Edinho Araújo" className="h-full w-full object-cover" width={800} height={800} />
+                  <img src={portrait} alt="Edinho Araújo" className="h-full w-full object-cover" width={1218} height={1210} />
                 </div>
               </div>
             </Reveal>

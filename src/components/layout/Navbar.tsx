@@ -16,10 +16,10 @@ export function Navbar() {
         <nav className="container-x flex items-center justify-between px-5 py-3 lg:px-12">
           <button
             onClick={() => goTo('inicio')}
-            className="inline-flex flex-none rounded-xl bg-white px-3 py-2 shadow-card"
+            className="inline-flex flex-none"
             aria-label="Ir para o topo"
           >
-            <Logo className="h-10" />
+            <Logo className="h-11" />
           </button>
 
           <ul className="hidden items-center gap-7 lg:flex">

@@ -9,7 +9,7 @@ interface LogoProps {
 export function Logo({ className }: LogoProps) {
   return (
     <img
-      src="/images/LOGO-CAMPANHA EDINHO-03.png"
+      src="/images/LOGO-CAMPANHA EDINHO-02.png"
       alt="Edinho — Deputado Federal 2525"
       className={`w-auto ${className ?? 'h-12'}`}
       width={2268}
