@@ -10,8 +10,8 @@ export function WhoIs() {
       <div className="container-x relative grid gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal>
-            <span className="eyebrow">
-              <span className="h-px w-6 bg-green-500" />
+            <span className="eyebrow text-green-400">
+              <span className="h-px w-6 bg-green-400" />
               Quem é Edinho
             </span>
           </Reveal>

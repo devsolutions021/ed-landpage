@@ -14,7 +14,7 @@ export function Results() {
           eyebrow="Resultados"
           title={
             <>
-              Não é promessa. <span className="text-em-green">Tem a marca do Edinho.</span>
+              Aqui tem a <span className="text-em-green">marca do Edinho.</span>
             </>
           }
         />

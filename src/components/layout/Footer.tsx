@@ -45,7 +45,7 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-white/60">
               <li><a href="#inicio" className="hover:text-gold">Início</a></li>
               <li><a href="#resultados" className="hover:text-gold">Resultados</a></li>
-              <li><a href="#propostas" className="hover:text-gold">Propostas</a></li>
+              <li><a href="#compromissos" className="hover:text-gold">Compromissos</a></li>
               <li><a href="#faca-parte" className="hover:text-gold">Faça parte</a></li>
               <li><a href={LINKS.abaixoAssinado} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Abaixo-assinado da Saúde</a></li>
             </ul>
@@ -62,7 +62,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Edinho Araújo 2525. Todos os direitos reservados.</p>
-          <p className="font-semibold text-white/55">A força do Interior em Brasília.</p>
+          <p className="font-semibold text-white/55">A força de São Paulo em Brasília.</p>
         </div>
       </div>
     </footer>

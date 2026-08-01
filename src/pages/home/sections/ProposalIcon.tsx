@@ -4,6 +4,8 @@ const PATHS: Record<string, string> = {
   agro: 'M12 3c0 4-3 5-3 9a3 3 0 0 0 6 0c0-4-3-5-3-9Zm-6 8c-1 2 0 5 3 6M18 11c1 2 0 5-3 6M12 15v6',
   city: 'M3 21V9l6-4v4l6-4v6l6-2v12H3Zm4-3h2v-2H7v2Zm4 0h2v-2h-2v2Zm4 0h2v-2h-2v2Z',
   work: 'M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6Zm2 0h2V5h-2v2Z',
+  people: 'M9 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm7 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3ZM3 20v-1c0-2.2 2.7-3.5 6-3.5s6 1.3 6 3.5v1M15 16c2.6.3 6 1.4 6 3.5v.5',
+  road: 'M6 21 9 4h6l3 17M12 7v2M12 12v2M12 17v1',
 };
 
 export function ProposalIcon({ name }: { name: string }) {

@@ -24,10 +24,10 @@ export function Stats() {
       <div className="container-x">
         <SectionHeading
           tone="dark"
-          eyebrow="Uma vida inteira pelo Interior"
+          eyebrow="Uma vida inteira por São Paulo"
           title={
             <>
-              Uma vida inteira <span className="text-em-green">trabalhando</span> pelo Interior
+              Uma vida inteira <span className="text-em-green">trabalhando</span> por São Paulo
             </>
           }
         />

@@ -19,9 +19,9 @@ export function Hero() {
       <div className="container-x relative grid items-center gap-10 px-5 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
         {/* Coluna texto */}
         <div className="order-2 lg:order-1">
-          <motion.span custom={0} variants={fade} initial="hidden" animate="show" className="eyebrow">
+          <motion.span custom={0} variants={fade} initial="hidden" animate="show" className="eyebrow text-yellow-400">
             <span className="h-px w-6 bg-gold" />
-            A força do Interior em Brasília
+            A força de São Paulo em Brasília
           </motion.span>
 
           <motion.h1 custom={1} variants={fade} initial="hidden" animate="show" className="display mt-5 text-white">
@@ -96,7 +96,7 @@ export function Hero() {
         <div className="flex w-max animate-marquee gap-8 whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, block) => (
             <div key={block} className="flex items-center gap-8">
-              {['Quem já fez, sabe como fazer mais', '54 anos de vida pública', '16 anos prefeito de Rio Preto', 'A força do Interior', 'Deputado Federal 2525'].map(
+              {['Quem já fez, sabe como fazer mais', '54 anos de vida pública', '16 anos prefeito de Rio Preto', 'A força de São Paulo', 'Deputado Federal 2525'].map(
                 (t) => (
                   <span key={t} className="flex items-center gap-8 text-sm font-bold uppercase tracking-[0.2em] text-white/45">
                     {t}

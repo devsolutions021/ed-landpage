@@ -4,11 +4,11 @@ import { ProposalIcon } from './ProposalIcon';
 
 export function Proposals() {
   return (
-    <section id="propostas" className="section-pad relative bg-white">
+    <section id="compromissos" className="section-pad relative bg-white">
       <div className="container-x">
         <SectionHeading
           tone="dark"
-          eyebrow="Propostas"
+          eyebrow="Compromissos"
           title={
             <>
               Edinho já fez muito. <span className="text-em-green">E quer fazer muito mais.</span>
@@ -24,7 +24,8 @@ export function Proposals() {
                   <ProposalIcon name={item.icon} />
                 </span>
                 <h3 className="mt-5 text-xl font-extrabold uppercase tracking-wide text-navy">{item.title}</h3>
-                <ul className="mt-4 space-y-3">
+                <p className="mt-3 text-sm leading-relaxed text-navy/60">{item.intro}</p>
+                <ul className="mt-4 space-y-3 border-t border-navy/10 pt-4">
                   {item.points.map((p) => (
                     <li key={p} className="flex gap-3 text-sm leading-relaxed text-navy/70">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-green-500" />

@@ -12,8 +12,8 @@ export function YourCity() {
         {/* Texto */}
         <div>
           <Reveal>
-            <span className="eyebrow">
-              <span className="h-px w-6 bg-green-500" />
+            <span className="eyebrow text-green-400">
+              <span className="h-px w-6 bg-green-400" />
               Na sua cidade
             </span>
           </Reveal>
@@ -24,7 +24,7 @@ export function YourCity() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-md leading-relaxed text-white/65">
-              Quem vive no município sabe onde o problema aperta. E quem quer representar o Interior precisa ouvir.
+              Quem vive no município sabe onde o problema aperta. E quem quer representar São Paulo precisa ouvir.
               Conte para Edinho.
             </p>
           </Reveal>
@@ -35,7 +35,7 @@ export function YourCity() {
                 Quer receber Edinho na sua cidade?
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                São Paulo tem 645 municípios. Para representar o Interior, é preciso estar no Interior. Conversar. Ouvir.
+                São Paulo tem 645 municípios. Para representar o Estado, é preciso estar perto de cada um deles. Conversar. Ouvir.
                 Olhar nos olhos. Entender cada realidade.
               </p>
               <Button href={LINKS.whatsappCampanha} variant="outline" className="mt-6">
@@ -51,7 +51,7 @@ export function YourCity() {
             {form.submitted ? (
               <FormSuccess
                 title="Recebido!"
-                message="Abrimos o WhatsApp para você concluir o envio. Obrigado por fortalecer o Interior."
+                message="Abrimos o WhatsApp para você concluir o envio. Obrigado por fortalecer São Paulo."
                 resetLabel="Enviar outra mensagem"
                 onReset={form.reset}
               />

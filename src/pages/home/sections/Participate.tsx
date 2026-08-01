@@ -51,7 +51,7 @@ export function Participate() {
               {form.submitted ? (
                 <FormSuccess
                   title="Bem-vindo à campanha!"
-                  message="Abrimos o WhatsApp para concluir seu cadastro. Juntos pela força do Interior."
+                  message="Abrimos o WhatsApp para concluir seu cadastro. Juntos pela força de São Paulo."
                   onReset={form.reset}
                 />
               ) : (

@@ -26,7 +26,7 @@ export function FinalCta() {
 
         <Reveal delay={0.05}>
           <p className="mx-auto mt-6 max-w-2xl text-white/70">
-            Agora, Edinho quer colocar toda essa experiência novamente a serviço do Interior.
+            Agora, Edinho quer colocar toda essa experiência novamente a serviço de São Paulo.
           </p>
         </Reveal>
 
@@ -42,7 +42,7 @@ export function FinalCta() {
           </p>
           <p className="font-display text-7xl text-gradient-gold sm:text-8xl md:text-9xl">2525</p>
           <p className="mt-4 text-base font-semibold uppercase tracking-[0.2em] text-gold-400">
-            A força do Interior em Brasília
+            A força de São Paulo em Brasília
           </p>
         </Reveal>
 

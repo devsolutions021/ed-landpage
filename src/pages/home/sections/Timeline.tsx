@@ -10,7 +10,7 @@ export function Timeline() {
           eyebrow="Linha do tempo"
           title={
             <>
-              Uma história construída <span className="text-em-green">pelo trabalho</span>
+              Uma história construída <span className="text-em-green">com muito trabalho</span>
             </>
           }
         />

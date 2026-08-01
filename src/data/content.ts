@@ -22,6 +22,7 @@ export interface TimelineItem {
 export interface ProposalItem {
   icon: string;
   title: string;
+  intro: string;
   points: string[];
 }
 
@@ -29,7 +30,7 @@ export const HERO = {
   name: 'Edinho Araújo',
   role: 'Deputado Federal',
   number: '2525',
-  slogan: 'A força do Interior em Brasília.',
+  slogan: 'A força de São Paulo em Brasília.',
   subSlogan: 'Quem já fez, sabe como fazer mais.',
   bio: [
     '54 anos de vida pública.',
@@ -39,7 +40,7 @@ export const HERO = {
     'Ex-ministro de Portos.',
   ],
   paragraph:
-    'Edinho conhece o Interior. Conhece Brasília. E sabe transformar experiência, diálogo e trabalho em resultado.',
+    'Edinho conhece São Paulo. Conhece Brasília. E sabe transformar experiência, diálogo e trabalho em resultado.',
   closing: 'Para Deputado Federal, vote Edinho 2525.',
 };
 
@@ -62,7 +63,13 @@ export const RESULTS: ResultItem[] = [
     tag: 'Rodovias',
     title: 'Euclides da Cunha',
     highlight: 'Mais de 180 km duplicados. E sem pedágio.',
-    body: 'Uma ligação mais segura entre Mirassol, Votuporanga, Fernandópolis, Jales, Santa Fé do Sul, Rubineia e toda a região.',
+    body: 'Uma ligação mais segura entre Mirassol, Tanabi, Votuporanga, Fernandópolis, Jales, Santa Fé do Sul, Rubineia e toda a região.',
+  },
+  {
+    tag: 'Saneamento',
+    title: 'Semae em 1º lugar',
+    highlight: 'O melhor serviço de água e esgoto do Brasil.',
+    body: 'Edinho transformou o Semae em referência nacional, com uma das menores tarifas do país: 100% de água tratada e esgoto coletado em Rio Preto.',
   },
   {
     tag: 'Mobilidade',
@@ -92,7 +99,7 @@ export const RESULTS: ResultItem[] = [
 
 export const TIMELINE: TimelineItem[] = [
   {
-    year: '22 anos',
+    year: '23 anos',
     title: 'A primeira eleição',
     body: 'Edinho disputou sua primeira eleição em Santa Fé do Sul.',
   },
@@ -127,9 +134,9 @@ export const TIMELINE: TimelineItem[] = [
     body: 'Depois de administrar municípios, atuar no Estado e representar São Paulo no Congresso, Edinho chega ao Governo Federal.',
   },
   {
-    year: '2017',
+    year: '2016',
     title: 'Rio Preto chama Edinho de volta',
-    body: 'Eleito novamente prefeito, já no primeiro turno.',
+    body: 'Eleito novamente prefeito, já no primeiro turno. A posse aconteceria em 2017.',
   },
   {
     year: '2020',
@@ -139,7 +146,7 @@ export const TIMELINE: TimelineItem[] = [
   {
     year: '2026',
     title: 'Uma nova missão',
-    body: 'Levar novamente a força do Interior para Brasília. Edinho Araújo. Deputado Federal 2525.',
+    body: 'Levar novamente a força de São Paulo para Brasília. Edinho Araújo. Deputado Federal 2525.',
   },
 ];
 
@@ -149,46 +156,55 @@ export const PROPOSALS: ProposalItem[] = [
   {
     icon: 'health',
     title: 'Saúde mais forte',
+    intro:
+      'A saúde será prioridade. O compromisso é destinar 50% dos recursos das emendas parlamentares para o fortalecimento da rede pública e filantrópica de atendimento.',
     points: [
-      'Buscar mais recursos para Rio Preto e para os municípios do Interior.',
-      'Fortalecer o Hospital de Base, a Famerp, Santas Casas e hospitais municipais.',
-      'Reduzir filas de exames e cirurgias e ampliar o atendimento regional.',
+      'Destinar 50% das emendas parlamentares para a área da saúde.',
+      'Priorizar investimentos no complexo Hospital de Base/Hospital da Criança e Maternidade, no Hospital Frei Francisco, no Hospital de Amor, nas Santas Casas e nos hospitais municipais.',
+      'Apoiar a regionalização dos serviços de saúde para reduzir filas de exames e cirurgias, ampliar o atendimento especializado e aproveitar a estrutura disponível dos hospitais regionais.',
     ],
   },
   {
     icon: 'education',
     title: 'Educação e oportunidades',
+    intro:
+      'A educação, a ciência e a qualificação profissional são instrumentos essenciais para o desenvolvimento econômico e social.',
     points: [
-      'Consolidar a UFSCar em Rio Preto.',
-      'Ampliar o Instituto Federal e defender a Famerp.',
-      'Fortalecer o ensino técnico, a pesquisa, a inovação e a formação para as novas profissões.',
+      'Apoiar a criação de novos cursos no campus da UFSCar em São José do Rio Preto e defender a construção de sua sede própria.',
+      'Buscar a ampliação da oferta de cursos do Instituto Federal de São José do Rio Preto e defender mais investimentos nas universidades públicas estaduais, incluindo a Famerp.',
+      'Incentivar o ensino técnico, a pesquisa, a inovação e a formação dos jovens para as profissões do futuro.',
     ],
   },
   {
     icon: 'agro',
     title: 'Força para o agro',
+    intro:
+      'O agronegócio é um dos principais motores da economia regional e precisa de infraestrutura, crédito e previsibilidade para continuar gerando emprego e renda.',
     points: [
-      'Crédito, seguro rural, tecnologia, melhores estradas e conectividade.',
-      'Menos burocracia e mais segurança para quem trabalha e produz.',
-      'Edinho conhece o campo porque suas próprias raízes estão nele.',
+      'Defender políticas de crédito rural, seguro agrícola, inovação tecnológica e melhoria das condições de logística e escoamento da produção.',
+      'Atuar pela redução da burocracia e pelo fortalecimento da segurança jurídica para produtores rurais de todos os portes.',
+      'Propor estudos para a implantação do Plano Safra Plurianual, permitindo planejamento de longo prazo e previsibilidade nos investimentos do setor.',
     ],
   },
   {
-    icon: 'city',
-    title: 'Municípios mais fortes',
+    icon: 'people',
+    title: 'Cidadania e bem-estar',
+    intro: 'O desenvolvimento deve caminhar ao lado da inclusão, da proteção social e do respeito às pessoas.',
     points: [
-      'Mais recursos chegando às cidades e menos burocracia para as prefeituras.',
-      'Mais força para os pequenos municípios.',
-      'Diálogo com prefeitos e vereadores independentemente de partido.',
+      'Apoiar programas voltados à longevidade ativa e incentivar a implantação de creches-dia para idosos.',
+      'Defender a igualdade de oportunidades, o combate a todas as formas de preconceito e a promoção do diálogo, do respeito e da convivência harmoniosa.',
+      'Apoiar iniciativas de proteção às mulheres e o fortalecimento do combate à violência e ao feminicídio.',
     ],
   },
   {
-    icon: 'work',
-    title: 'Emprego e desenvolvimento',
+    icon: 'road',
+    title: 'Infraestrutura e mobilidade',
+    intro: 'Investir em infraestrutura é investir em desenvolvimento, segurança e competitividade para toda a região.',
     points: [
-      'Atrair investimentos e fortalecer pequenas empresas.',
-      'Apoiar comércio, indústria e serviços; investir em infraestrutura e logística.',
-      'Gerar oportunidades para que nossos jovens estudem, trabalhem e construam seu futuro no Interior.',
+      'Defender a implantação do Macroanel da Região Metropolitana de São José do Rio Preto, integrando as rodovias BR-153, Washington Luís e Assis Chateaubriand.',
+      'Cobrar providências imediatas para a recuperação da BR-153, entre São José do Rio Preto e Icém, inclusive com a revisão do modelo de concessão, caso necessário.',
+      'Defender a duplicação da Rodovia Assis Chateaubriand entre Guapiaçu e Barretos, a duplicação da Rodovia Feliciano Salles Cunha e a manutenção da Rodovia Euclides da Cunha sem pedágios.',
+      'Exigir da concessionária Rumo a conclusão das obras de segurança previstas para a malha ferroviária da região Noroeste, especialmente nos municípios de Mirassol, Cedral e São José do Rio Preto.',
     ],
   },
 ];
@@ -200,7 +216,7 @@ export const WHY_EDINHO = {
     'Já conhece o Congresso.',
     'Conhece os ministérios.',
     'Conhece os programas federais.',
-    'Conhece prefeitos e lideranças do Interior.',
+    'Conhece prefeitos e lideranças paulistas.',
     'E, principalmente, conhece as necessidades de quem vive aqui.',
   ],
   closing: 'Não precisa começar do zero. Está preparado desde o primeiro dia.',

@@ -1,7 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Logo } from '@/components/ui';
-import { LINKS } from '@/data/links';
-import { NAV_ITEMS, useNavbar } from './useNavbar';
+import { AnimatePresence, motion } from "framer-motion";
+import { Logo } from "@/components/ui";
+import { LINKS } from "@/data/links";
+import { NAV_ITEMS, useNavbar } from "./useNavbar";
 
 export function Navbar() {
   const { scrolled, menuOpen, setMenuOpen, active, goTo } = useNavbar();
@@ -10,16 +10,18 @@ export function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled ? 'border-b border-white/10 bg-ink/85 backdrop-blur-lg' : 'bg-transparent'
+          scrolled
+            ? "border-b border-white/10 bg-ink/85 backdrop-blur-lg"
+            : "bg-transparent"
         }`}
       >
         <nav className="container-x flex items-center justify-between px-5 py-3 lg:px-12">
           <button
-            onClick={() => goTo('inicio')}
+            onClick={() => goTo("inicio")}
             className="inline-flex flex-none"
             aria-label="Ir para o topo"
           >
-            <Logo className="h-11" />
+            <Logo className="h-16" />
           </button>
 
           <ul className="hidden items-center gap-7 lg:flex">
@@ -28,7 +30,9 @@ export function Navbar() {
                 <button
                   onClick={() => goTo(item.id)}
                   className={`relative text-sm font-semibold transition-colors ${
-                    active === item.id ? 'text-yellow-400' : 'text-white/75 hover:text-white'
+                    active === item.id
+                      ? "text-yellow-400"
+                      : "text-white/75 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -58,9 +62,15 @@ export function Navbar() {
               aria-label="Abrir menu"
             >
               <span className="relative block h-4 w-5">
-                <span className={`absolute left-0 h-0.5 w-5 bg-current transition-all ${menuOpen ? 'top-2 rotate-45' : 'top-0'}`} />
-                <span className={`absolute left-0 top-2 h-0.5 w-5 bg-current transition-all ${menuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <span className={`absolute left-0 h-0.5 w-5 bg-current transition-all ${menuOpen ? 'top-2 -rotate-45' : 'top-4'}`} />
+                <span
+                  className={`absolute left-0 h-0.5 w-5 bg-current transition-all ${menuOpen ? "top-2 rotate-45" : "top-0"}`}
+                />
+                <span
+                  className={`absolute left-0 top-2 h-0.5 w-5 bg-current transition-all ${menuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`absolute left-0 h-0.5 w-5 bg-current transition-all ${menuOpen ? "top-2 -rotate-45" : "top-4"}`}
+                />
               </span>
             </button>
           </div>
@@ -91,7 +101,11 @@ export function Navbar() {
                   </button>
                 </motion.li>
               ))}
-              <motion.li initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
                 <a
                   href={LINKS.whatsappCampanha}
                   target="_blank"
