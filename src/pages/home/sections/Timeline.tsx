@@ -3,7 +3,7 @@ import { TIMELINE } from '@/data/content';
 
 export function Timeline() {
   return (
-    <section className="section-pad relative overflow-hidden bg-sky">
+    <section className="section-pad relative overflow-hidden bg-white">
       <div className="container-x relative">
         <SectionHeading
           tone="dark"
@@ -26,7 +26,7 @@ export function Timeline() {
               <li key={item.year} className="relative md:grid md:grid-cols-2 md:gap-10 md:py-4">
                 {/* marcador */}
                 <span
-                  className={`absolute left-4 top-2 z-10 h-3.5 w-3.5 -translate-x-1/2 rounded-full ring-4 ring-sky md:left-1/2 ${
+                  className={`absolute left-4 top-2 z-10 h-3.5 w-3.5 -translate-x-1/2 rounded-full ring-4 ring-white md:left-1/2 ${
                     isLast ? 'bg-yellow shadow-gold' : 'bg-green-500'
                   }`}
                   aria-hidden="true"

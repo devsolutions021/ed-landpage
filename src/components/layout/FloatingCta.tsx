@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { LINKS } from '@/data/links';
+import { INSTAGRAM_DM } from '@/data/socials';
 
 // Botão flutuante fixo — aparece após rolar um pouco.
 export function FloatingCta() {
@@ -16,7 +16,7 @@ export function FloatingCta() {
     <AnimatePresence>
       {visible && (
         <motion.a
-          href={LINKS.whatsappCampanha}
+          href={INSTAGRAM_DM}
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 40, scale: 0.9 }}
@@ -35,3 +35,4 @@ export function FloatingCta() {
     </AnimatePresence>
   );
 }
+

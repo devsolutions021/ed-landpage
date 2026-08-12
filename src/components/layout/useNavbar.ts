@@ -10,7 +10,6 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'edinho', label: 'Edinho' },
   { id: 'resultados', label: 'Resultados' },
   { id: 'compromissos', label: 'Compromissos' },
-  { id: 'sua-cidade', label: 'Na sua cidade' },
   { id: 'faca-parte', label: 'Faça parte' },
 ];
 

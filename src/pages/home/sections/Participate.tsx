@@ -8,7 +8,7 @@ export function Participate() {
   const form = useLeadForm({
     availableOptions: OPTION_LABELS,
     requireOption: true,
-    waIntro: 'Olá! Quero fazer parte da campanha do Edinho 2525.',
+    dmIntro: 'Olá! Quero fazer parte da campanha do Edinho 2525.',
   });
 
   return (
@@ -51,14 +51,14 @@ export function Participate() {
               {form.submitted ? (
                 <FormSuccess
                   title="Bem-vindo à campanha!"
-                  message="Abrimos o WhatsApp para concluir seu cadastro. Juntos pela força de São Paulo."
+                  message="Abrimos o Instagram para concluir seu cadastro. Juntos pela força de São Paulo."
                   onReset={form.reset}
                 />
               ) : (
                 <form onSubmit={form.submit} className="space-y-5">
                   <Field label="Nome" value={form.state.name} onChange={(v) => form.setField('name', v)} placeholder="Seu nome" />
                   <Field label="Cidade" value={form.state.city} onChange={(v) => form.setField('city', v)} placeholder="Sua cidade" />
-                  <Field label="WhatsApp" value={form.state.whatsapp} onChange={(v) => form.setField('whatsapp', v)} placeholder="(00) 00000-0000" inputMode="tel" />
+                  <Field label="Telefone" value={form.state.phone} onChange={(v) => form.setField('phone', v)} placeholder="(00) 00000-0000" inputMode="tel" />
 
                   <div>
                     <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-white/60">Como quer participar?</span>

@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { maskPhone, onlyDigits } from '@/lib/mask';
-import { LINKS } from '@/data/links';
+import { INSTAGRAM_DM } from '@/data/socials';
 import { PETITION_GOAL } from '@/data/petition';
 
 // ─── Hook: assinatura do abaixo-assinado ──────────────────
@@ -8,7 +8,7 @@ export function usePetitionForm() {
   // Estados
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
-  const [whatsapp, setWhatsapp] = useState('');
+  const [phone, setPhone] = useState('');
   const [supports, setSupports] = useState(false);
   const [wantsUpdates, setWantsUpdates] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -17,42 +17,42 @@ export function usePetitionForm() {
 
   // Constantes derivadas
   const isValid = useMemo(() => {
-    return name.trim().length >= 2 && city.trim().length >= 2 && onlyDigits(whatsapp).length >= 10 && supports;
-  }, [name, city, whatsapp, supports]);
+    return name.trim().length >= 2 && city.trim().length >= 2 && onlyDigits(phone).length >= 10 && supports;
+  }, [name, city, phone, supports]);
 
   const progress = Math.min(Math.round((signatures / PETITION_GOAL.target) * 100), 100);
 
   // Funções
-  const changeWhatsapp = (value: string) => setWhatsapp(maskPhone(value));
+  const changePhone = (value: string) => setPhone(maskPhone(value));
 
-  const buildWhatsappUrl = () => {
+  const buildMessageUrl = () => {
     const lines = [
       'Assino o abaixo-assinado pela saúde do Noroeste Paulista.',
       '',
-      `*Nome:* ${name}`,
-      `*Cidade:* ${city}`,
-      `*WhatsApp:* ${whatsapp}`,
-      wantsUpdates ? '*Quero receber notícias da mobilização pelo WhatsApp.*' : '',
+      `Nome: ${name}`,
+      `Cidade: ${city}`,
+      `Telefone: ${phone}`,
+      wantsUpdates ? 'Quero receber notícias da mobilização.' : '',
     ].filter(Boolean);
-    return `${LINKS.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
+    return `${INSTAGRAM_DM}?text=${encodeURIComponent(lines.join('\n'))}`;
   };
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isValid) {
-      setError('Preencha nome, cidade, um WhatsApp válido e confirme o apoio à mobilização.');
+      setError('Preencha nome, cidade, um telefone válido e confirme o apoio à mobilização.');
       return;
     }
     setError(null);
     setSignatures((n) => n + 1);
-    window.open(buildWhatsappUrl(), '_blank', 'noopener');
+    window.open(buildMessageUrl(), '_blank', 'noopener');
     setSubmitted(true);
   };
 
   const reset = () => {
     setName('');
     setCity('');
-    setWhatsapp('');
+    setPhone('');
     setSupports(false);
     setWantsUpdates(false);
     setSubmitted(false);
@@ -62,7 +62,7 @@ export function usePetitionForm() {
   return {
     name,
     city,
-    whatsapp,
+    phone,
     supports,
     wantsUpdates,
     submitted,
@@ -72,7 +72,7 @@ export function usePetitionForm() {
     progress,
     setName,
     setCity,
-    changeWhatsapp,
+    changePhone,
     setSupports,
     setWantsUpdates,
     submit,

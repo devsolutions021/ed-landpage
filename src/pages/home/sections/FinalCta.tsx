@@ -1,5 +1,4 @@
 import { Button, Reveal } from '@/components/ui';
-import { LINKS } from '@/data/links';
 
 const CLAIMS = [
   '54 anos de vida pública.',
@@ -48,7 +47,7 @@ export function FinalCta() {
 
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button href={LINKS.whatsappCampanha} size="lg">
+            <Button href="#faca-parte" external={false} size="lg">
               Faça parte da campanha
             </Button>
           </div>

@@ -1,31 +1,31 @@
 import { useMemo, useState } from 'react';
 import { maskPhone, onlyDigits } from '@/lib/mask';
-import { LINKS } from '@/data/links';
+import { INSTAGRAM_DM } from '@/data/socials';
 
 // ─── Tipos ────────────────────────────────────────────────
 export interface LeadFormState {
   name: string;
   city: string;
-  whatsapp: string;
+  phone: string;
   message?: string;
   options: string[];
 }
 
-type Field = 'name' | 'city' | 'whatsapp' | 'message';
+type Field = 'name' | 'city' | 'phone' | 'message';
 
 interface UseLeadFormArgs {
   availableOptions?: string[];
   requireOption?: boolean;
-  waIntro?: string;
+  dmIntro?: string;
 }
 
-// ─── Hook: formulário de captação (sem backend — compõe WhatsApp) ──
-export function useLeadForm({ availableOptions = [], requireOption = false, waIntro = 'Olá! Quero fazer parte da campanha.' }: UseLeadFormArgs = {}) {
+// ─── Hook: formulário de captação (sem backend — compõe mensagem Instagram) ──
+export function useLeadForm({ availableOptions = [], requireOption = false, dmIntro = 'Olá! Quero fazer parte da campanha.' }: UseLeadFormArgs = {}) {
   // Estados
   const [state, setState] = useState<LeadFormState>({
     name: '',
     city: '',
-    whatsapp: '',
+    phone: '',
     message: '',
     options: [],
   });
@@ -36,7 +36,7 @@ export function useLeadForm({ availableOptions = [], requireOption = false, waIn
   const isValid = useMemo(() => {
     const hasName = state.name.trim().length >= 2;
     const hasCity = state.city.trim().length >= 2;
-    const hasPhone = onlyDigits(state.whatsapp).length >= 10;
+    const hasPhone = onlyDigits(state.phone).length >= 10;
     const hasOption = !requireOption || state.options.length > 0;
     return hasName && hasCity && hasPhone && hasOption;
   }, [state, requireOption]);
@@ -45,7 +45,7 @@ export function useLeadForm({ availableOptions = [], requireOption = false, waIn
   const setField = (field: Field, value: string) => {
     setState((prev) => ({
       ...prev,
-      [field]: field === 'whatsapp' ? maskPhone(value) : value,
+      [field]: field === 'phone' ? maskPhone(value) : value,
     }));
   };
 
@@ -58,33 +58,33 @@ export function useLeadForm({ availableOptions = [], requireOption = false, waIn
     }));
   };
 
-  const buildWhatsappUrl = () => {
+  const buildMessageUrl = () => {
     const lines = [
-      waIntro,
+      dmIntro,
       '',
-      `*Nome:* ${state.name}`,
-      `*Cidade:* ${state.city}`,
-      `*WhatsApp:* ${state.whatsapp}`,
+      `Nome: ${state.name}`,
+      `Cidade: ${state.city}`,
+      `Telefone: ${state.phone}`,
     ];
-    if (state.message?.trim()) lines.push(`*Mensagem:* ${state.message}`);
-    if (state.options.length) lines.push(`*Interesses:* ${state.options.join(', ')}`);
+    if (state.message?.trim()) lines.push(`Mensagem: ${state.message}`);
+    if (state.options.length) lines.push(`Interesses: ${state.options.join(', ')}`);
     const text = encodeURIComponent(lines.join('\n'));
-    return `${LINKS.whatsapp}?text=${text}`;
+    return `${INSTAGRAM_DM}?text=${text}`;
   };
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isValid) {
-      setError('Preencha nome, cidade e um WhatsApp válido para continuar.');
+      setError('Preencha nome, cidade e um telefone válido para continuar.');
       return;
     }
     setError(null);
-    window.open(buildWhatsappUrl(), '_blank', 'noopener');
+    window.open(buildMessageUrl(), '_blank', 'noopener');
     setSubmitted(true);
   };
 
   const reset = () => {
-    setState({ name: '', city: '', whatsapp: '', message: '', options: [] });
+    setState({ name: '', city: '', phone: '', message: '', options: [] });
     setSubmitted(false);
     setError(null);
   };

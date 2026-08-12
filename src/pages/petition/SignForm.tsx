@@ -58,7 +58,7 @@ export function SignForm() {
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-gradient text-2xl text-ink">✓</span>
           <h3 className="display mt-5 text-2xl text-white">Assinatura registrada!</h3>
           <p className="mt-3 max-w-xs text-sm text-white/60">
-            Abrimos o WhatsApp para você confirmar. Agora compartilhe e faça essa voz chegar a Brasília.
+            Abrimos o Instagram para você confirmar. Agora compartilhe e faça essa voz chegar a Brasília.
           </p>
           <button onClick={form.reset} className="mt-5 text-sm font-bold uppercase tracking-wide text-gold hover:underline">
             Assinar novamente
@@ -68,14 +68,14 @@ export function SignForm() {
         <form onSubmit={form.submit} className="space-y-5">
           <Field label="Nome" value={form.name} onChange={form.setName} placeholder="Seu nome completo" />
           <Field label="Cidade" value={form.city} onChange={form.setCity} placeholder="Sua cidade" />
-          <Field label="WhatsApp" value={form.whatsapp} onChange={form.changeWhatsapp} placeholder="(00) 00000-0000" inputMode="tel" />
+          <Field label="Telefone" value={form.phone} onChange={form.changePhone} placeholder="(00) 00000-0000" inputMode="tel" />
 
           <div className="space-y-3 rounded-2xl border border-white/10 bg-white/[0.02] p-4">
             <CheckLine checked={form.supports} onToggle={() => form.setSupports(!form.supports)}>
               <strong className="text-white">Eu apoio</strong> esta mobilização pela saúde do Noroeste Paulista.
             </CheckLine>
             <CheckLine checked={form.wantsUpdates} onToggle={() => form.setWantsUpdates(!form.wantsUpdates)}>
-              Quero receber pelo WhatsApp notícias sobre esta mobilização e informações de Edinho Araújo.
+              Quero receber notícias sobre esta mobilização e informações de Edinho Araújo.
             </CheckLine>
           </div>
 

@@ -1,4 +1,4 @@
-import { FinalCta, Hero, Participate, Proposals, Results, Stats, Timeline, WhoIs, WhyEdinho, YourCity } from './sections';
+import { FinalCta, Hero, Participate, Proposals, Results, Stats, Timeline, WhoIs, WhyEdinho } from './sections';
 
 export function HomePage() {
   return (
@@ -10,7 +10,6 @@ export function HomePage() {
       <WhoIs />
       <Proposals />
       <WhyEdinho />
-      <YourCity />
       <Participate />
       <FinalCta />
     </main>

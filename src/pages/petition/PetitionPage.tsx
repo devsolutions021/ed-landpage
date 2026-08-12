@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button, Logo, Reveal, SectionHeading } from '@/components/ui';
 import { DEFEND_ITEMS, EDINHO_HEALTH, PETITION_HERO } from '@/data/petition';
-import { LINKS } from '@/data/links';
 import { DefendIcon } from './DefendIcon';
 import { SignForm } from './SignForm';
 
@@ -212,9 +211,6 @@ export function PetitionPage() {
               <div className="mt-9 flex flex-wrap justify-center gap-4">
                 <Button href="#assinar" external={false} size="lg">
                   Eu quero assinar
-                </Button>
-                <Button href={LINKS.whatsappCampanha} variant="outline" size="lg">
-                  Compartilhar no WhatsApp
                 </Button>
               </div>
             </Reveal>

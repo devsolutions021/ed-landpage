@@ -8,7 +8,7 @@ interface FormSuccessProps {
 // Estado de sucesso reutilizável para os formulários.
 export function FormSuccess({
   title = 'Recebido!',
-  message = 'Abrimos o WhatsApp para você concluir o envio. Obrigado por fazer parte.',
+  message = 'Abrimos o Instagram para você concluir o envio. Obrigado por fazer parte.',
   onReset,
   resetLabel = 'Enviar novamente',
 }: FormSuccessProps) {

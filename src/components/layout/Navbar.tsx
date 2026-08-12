@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Logo } from "@/components/ui";
-import { LINKS } from "@/data/links";
 import { NAV_ITEMS, useNavbar } from "./useNavbar";
 
 export function Navbar() {
@@ -49,9 +48,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <a
-              href={LINKS.whatsappCampanha}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#faca-parte"
               className="hidden rounded-full bg-gold-gradient px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-ink shadow-gold transition-transform hover:-translate-y-0.5 sm:inline-flex"
             >
               Edinho 2525
@@ -107,9 +104,8 @@ export function Navbar() {
                 transition={{ delay: 0.4 }}
               >
                 <a
-                  href={LINKS.whatsappCampanha}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#faca-parte"
+                  onClick={() => setMenuOpen(false)}
                   className="mt-4 inline-flex rounded-full bg-gold-gradient px-8 py-4 text-base font-extrabold uppercase tracking-wide text-ink"
                 >
                   Quero fazer parte
