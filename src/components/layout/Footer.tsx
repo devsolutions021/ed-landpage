@@ -59,7 +59,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
+        <div className="mt-14 rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-xs leading-relaxed text-white/50">
+          <p className="font-bold uppercase tracking-wide text-white/70">
+            Eleição 2026 — Edson Edinho Coelho Araújo — Deputado Federal
+          </p>
+          <p className="mt-2">CNPJ: 68.312.650/0001-06</p>
+          <p>Rua Rubião Junior, 3127, Apto 111 – Centro</p>
+          <p>São José do Rio Preto/SP – CEP 15010-090</p>
+          <p>
+            E-mail:{' '}
+            <a href="mailto:edinho@edinhoaraujo.com.br" className="hover:text-gold">
+              edinho@edinhoaraujo.com.br
+            </a>
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Edinho Araújo 2525. Todos os direitos reservados.</p>
           <p className="font-semibold text-white/55">A força de São Paulo em Brasília.</p>
         </div>
