@@ -68,8 +68,8 @@ export function Footer() {
           <p>São José do Rio Preto/SP – CEP 15010-090</p>
           <p>
             E-mail:{' '}
-            <a href="mailto:edinho@edinhoaraujo.com.br" className="hover:text-gold">
-              edinho@edinhoaraujo.com.br
+            <a href="mailto:edinho@edinho2525.com.br" className="hover:text-gold">
+              edinho@edinho2525.com.br
             </a>
           </p>
         </div>
