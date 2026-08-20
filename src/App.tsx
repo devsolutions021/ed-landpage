@@ -2,10 +2,13 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { FloatingCta, Footer, Navbar, ScrollToTop } from '@/components/layout';
 import { HomePage } from '@/pages/home/HomePage';
 import { PetitionPage } from '@/pages/petition/PetitionPage';
+import { usePageTracking } from '@/hooks/usePageTracking';
 
 export function App() {
   const { pathname } = useLocation();
   const isPetition = pathname.startsWith('/abaixo-assinado');
+
+  usePageTracking();
 
   return (
     <>
