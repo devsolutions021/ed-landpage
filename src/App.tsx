@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { FloatingCta, Footer, Navbar, ScrollToTop } from '@/components/layout';
+import { CookieConsent, FloatingCta, Footer, Navbar, ScrollToTop } from '@/components/layout';
 import { HomePage } from '@/pages/home/HomePage';
 import { PetitionPage } from '@/pages/petition/PetitionPage';
 import { usePageTracking } from '@/hooks/usePageTracking';
@@ -21,6 +21,7 @@ export function App() {
       </Routes>
       <Footer />
       {!isPetition && <FloatingCta />}
+      <CookieConsent />
     </>
   );
 }
